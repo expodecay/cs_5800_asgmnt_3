@@ -8,7 +8,7 @@ public class Driver {
         String message_type = scanner.next();
 
         if (message_type.equalsIgnoreCase("TextMessage")){
-            Message TextMessage = new TextMessage(new WhatsAppMessageSender());
+            MessageType TextMessage = new TextMessage(new WhatsAppMessageSender());
             TextMessage.sendMessage(message_type);
         }
     }

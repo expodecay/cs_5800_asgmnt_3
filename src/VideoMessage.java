@@ -1,7 +1,9 @@
-public class VideoMessage extends Message{
+public class VideoMessage implements MessageType {
+
+    protected MessageSender message_sender;
 
     public VideoMessage(MessageSender message_sender){
-        super.message_sender = message_sender;
+        message_sender = message_sender;
     }
 
     @Override

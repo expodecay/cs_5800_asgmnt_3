@@ -1,7 +1,9 @@
-public class TextMessage extends Message{
+public class TextMessage implements MessageType {
+
+    protected MessageSender message_sender;
 
     public TextMessage(MessageSender message_sender){
-        super.message_sender = message_sender;
+        this.message_sender = message_sender;
     }
 
     @Override

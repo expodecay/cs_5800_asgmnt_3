@@ -1,7 +1,9 @@
-public class ImageMessage extends Message{
+public class ImageMessage implements MessageType {
+
+    protected MessageSender message_sender;
 
     public ImageMessage(MessageSender message_sender){
-        super.message_sender = message_sender;
+        message_sender = message_sender;
     }
 
     @Override
