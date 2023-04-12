@@ -5,7 +5,7 @@ public class VideoMessage implements MessageType {
     protected MessageSender message_sender;
 
     public VideoMessage(MessageSender message_sender){
-        message_sender = message_sender;
+        this.message_sender = message_sender;
     }
 
     @Override

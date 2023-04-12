@@ -5,7 +5,7 @@ public class ImageMessage implements MessageType {
     protected MessageSender message_sender;
 
     public ImageMessage(MessageSender message_sender){
-        message_sender = message_sender;
+        this.message_sender = message_sender;
     }
 
     @Override
