@@ -5,10 +5,12 @@ import java.util.ArrayList;
 public class Order {
     ArrayList<FoodItem> order;
     int total;
+    String loyalty_status;
 
 
-    public Order(ArrayList<FoodItem> _order){
+    public Order(ArrayList<FoodItem> _order, String status){
         order = _order;
+        loyalty_status = status;
     }
 
     public int calculateTotal(){
@@ -21,8 +23,8 @@ public class Order {
             i++;
         }
         System.out.println("Total: $" + total);
-        LoyaltyStatus discount = new LoyaltyStatus();
-        double customer_discount = discount.discount("supreme");
+        LoyaltyStatus loyalty = new LoyaltyStatus();
+        int customer_discount = loyalty.discount(loyalty_status);
         total-= customer_discount;
         return total;
     }

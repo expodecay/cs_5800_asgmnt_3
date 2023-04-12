@@ -20,7 +20,7 @@ public class Driver {
         order.add(animal_garlic_fries);
         order.add(soda);
 
-        Order next_order = new Order(order);
+        Order next_order = new Order(order, "supreme");
         System.out.println("Order Total: $" + next_order.calculateTotal());
 
     }
