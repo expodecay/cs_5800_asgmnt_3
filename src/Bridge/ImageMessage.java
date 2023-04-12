@@ -1,3 +1,5 @@
+package Bridge;
+
 public class ImageMessage implements MessageType {
 
     protected MessageSender message_sender;

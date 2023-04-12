@@ -1,3 +1,5 @@
+package Bridge;
+
 public class WhatsAppMessageSender implements MessageSender{
 
     public void sendMessage(String message) {

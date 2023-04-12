@@ -1,3 +1,5 @@
+package Bridge;
+
 public class VideoMessage implements MessageType {
 
     protected MessageSender message_sender;

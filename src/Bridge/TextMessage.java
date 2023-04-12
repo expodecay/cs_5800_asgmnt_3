@@ -1,3 +1,5 @@
+package Bridge;
+
 public class TextMessage implements MessageType {
 
     protected MessageSender message_sender;
