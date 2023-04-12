@@ -5,30 +5,27 @@ import java.util.ArrayList;
 public class Order {
     ArrayList<FoodItem> order;
     int total;
-    double customer_discount = 0;
+
 
     public Order(ArrayList<FoodItem> _order){
         order = _order;
     }
 
     public int calculateTotal(){
+        int i = 0;
         for (FoodItem item : order) {
+            System.out.println("Item: " + i);
+            item.assemble();
+            System.out.println();
             total += item.getCost();
+            i++;
         }
+        System.out.println("Total: $" + total);
+        LoyaltyStatus discount = new LoyaltyStatus();
+        double customer_discount = discount.discount("supreme");
         total-= customer_discount;
         return total;
     }
 
-    public double discount(String discount){
-        if(discount == "basic"){
-            customer_discount = 1;
-        }
-        if(discount == "special"){
-            customer_discount = 2;
-        }
-        if(discount == "supreme"){
-            customer_discount = 3;
-        }
-        return customer_discount;
-    }
+
 }
